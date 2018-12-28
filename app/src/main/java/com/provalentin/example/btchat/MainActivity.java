@@ -1,5 +1,8 @@
 package com.provalentin.example.btchat;
 
+import static com.provalentin.example.btchat.Constants.REQUEST_CONNECT_DEVICE_SECURE;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -23,8 +26,11 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Discovering peers...", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                // Launch the DeviceListActivity to see devices and do scan
+                Intent serverIntent = new Intent(MainActivity.this, DeviceListActivity.class);
+                startActivityForResult(serverIntent, REQUEST_CONNECT_DEVICE_SECURE);
             }
         });
 

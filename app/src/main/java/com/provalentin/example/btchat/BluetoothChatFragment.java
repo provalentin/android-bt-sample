@@ -1,5 +1,7 @@
 package com.provalentin.example.btchat;
 
+import static com.provalentin.example.btchat.Constants.*;
+
 import android.app.ActionBar;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
@@ -33,11 +35,6 @@ import android.widget.Toast;
 public class BluetoothChatFragment extends Fragment {
 
     private static final String TAG = "BluetoothChatFragment";
-
-    // Intent request codes
-    private static final int REQUEST_CONNECT_DEVICE_SECURE = 1;
-    private static final int REQUEST_CONNECT_DEVICE_INSECURE = 2;
-    private static final int REQUEST_ENABLE_BT = 3;
 
     // Layout Views
     private ListView mConversationView;

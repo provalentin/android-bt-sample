@@ -5,6 +5,11 @@ package com.provalentin.example.btchat;
  */
 public interface Constants {
 
+    // Intent request codes
+    int REQUEST_CONNECT_DEVICE_SECURE = 1;
+    int REQUEST_CONNECT_DEVICE_INSECURE = 2;
+    int REQUEST_ENABLE_BT = 3;
+
     // Message types sent from the BluetoothChatService Handler
     int MESSAGE_STATE_CHANGE = 1;
     int MESSAGE_READ = 2;
